@@ -1,8 +1,8 @@
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
-#[command(name = "zConvert")]
-#[command(about = "convert media or extract archives", long_about = None)]
+#[command(name = "zconvert")]
+#[command(about = "convert images and extract archives", long_about = None)]
 pub struct Cli {
     #[command(subcommand)]
     pub command: Commands,
@@ -10,8 +10,8 @@ pub struct Cli {
 
 #[derive(Subcommand)]
 pub enum Commands {
-    /// convert media using ffmpeg
-    Convert {
+    /// convert image files (e.g., jpg to png)
+    Image {
         #[arg(short, long)]
         input: String,
 
@@ -19,12 +19,13 @@ pub enum Commands {
         output: String,
     },
 
-    /// extract an archive
-    Extract {
-        #[arg(short, long)]
-        archive_path: String,
+    /// extract archive files (zip, tar, etc)
+    Archive {
+        #[arg(short = 'a', long)]
+        archive: String,
 
-        #[arg(short, long, default_value = "./output")]
-        out_dir: String,
+        #[arg(short = 'o', long, default_value = "./output")]
+        output: String,
     },
 }
+
