@@ -23,10 +23,17 @@ zconvert archive -a stuff.zip -o ./output    # extract
 
 * ✅ supported formats
 
-**images** :: jpg, jpeg, png, bmp, tiff, gif, webp, avif  
-**audio**  :: mp3, flac, wav, ogg, aac, m4a  
-**video**  :: mp4, mkv, webm, avi, mov  
-**archives** :: zip, tar, gz, rar, 7z, etc
+** images ::
+jpg, jpeg, png, bmp, tiff, gif, webp, avif
+
+** audio ::
+mp3, flac, wav, ogg, aac, m4a
+
+** video ::
+mp4, mkv, webm, avi, mov
+
+** archives ::
+zip, tar, gz, rar, 7z, etc
 
 ---
 powered by rust, ffmpeg, nix
