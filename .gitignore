@@ -1,2 +1,32 @@
+# Rust / Cargo
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Nix
+result
+flake.lock
+.nox/
+.nix-*
+.nix-gc-*
+
+# Editor stuff
+*.swp
 *~
-/target
+\#*\#
+.\#*
+
+# Emacs
+*.elc
+auto-save-list/
+.emacs.desktop
+.emacs.desktop.lock
+*~
+\#*\#
+.\#*
+
+# VSCode (optional, just in case)
+.vscode/
+
+# Logs
+*.log
