@@ -1,0 +1,32 @@
+* zconvert
+
+simple CLI file conversion tool built in Rust.  
+supports image, audio/video, and archive conversion.
+
+uses ~ffmpeg~, ~7z~, and other system tools under the hood.  
+---
+
+* 🚀 usage
+
+#+begin_src bash
+zconvert image -i input.jpg -o output.png
+zconvert image -i input.webp -o output.avif
+
+zconvert media -i video.mp4 -o audio.mp3     # extract audio
+zconvert media -i sound.mp3 -o clip.mp4      # create video with black bg
+
+zconvert archive -a stuff.zip -o ./output    # extract
+#+end_src
+
+---
+
+
+* ✅ supported formats
+
+**images** :: jpg, jpeg, png, bmp, tiff, gif, webp, avif  
+**audio**  :: mp3, flac, wav, ogg, aac, m4a  
+**video**  :: mp4, mkv, webm, avi, mov  
+**archives** :: zip, tar, gz, rar, 7z, etc
+
+---
+powered by rust, ffmpeg, nix
